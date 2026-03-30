@@ -12,7 +12,7 @@ const grnSchema = new mongoose.Schema(
     totalExpectedQty: { type: Number, default: null },
     totalReceivedQty: { type: Number, default: null },
     totalAmount: { type: Number, default: null },
-    items: [itemScheme],
+    items: [itemSchema],
     rawText: { type: String, select: false },
     documentId: { type: mongoose.Schema.Types.ObjectId, ref: "Document" },
   },

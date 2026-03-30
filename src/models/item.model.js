@@ -2,11 +2,11 @@ const { default: mongoose } = require("mongoose");
 
 const itemSchema = new mongoose.Schema(
   {
-    itemCode: { type: String, default: null }, // primary match key
+    itemCode: { type: String, default: null },
     sku: { type: String, default: null },
     description: { type: String, default: null },
-    quantity: { type: Number, default: 0 }, // PO ordered / Invoice billed
-    receivedQuantity: { type: Number, default: 0 }, // GRN received
+    quantity: { type: Number, default: 0 },
+    receivedQuantity: { type: Number, default: 0 },
     unitPrice: { type: Number, default: null },
     mrp: { type: Number, default: null },
     taxableValue: { type: Number, default: null },
@@ -19,5 +19,4 @@ const itemSchema = new mongoose.Schema(
   { _id: false },
 );
 
-const item = mongoose.model("Item", itemSchema);
-module.exports = { item };
+module.exports = itemSchema;

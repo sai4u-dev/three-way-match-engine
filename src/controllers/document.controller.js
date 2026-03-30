@@ -12,6 +12,12 @@ async function uploadDocument(req, res, next) {
 
     console.log(parsed, "Nvidia");
 
+    const docRecord = await Document.create({
+      documentType,
+      rawText: parsedText.text,
+      parsedData: parsed,
+    });
+
     res.status(200).json({ parsedText });
   } catch (err) {
     console.error(err);

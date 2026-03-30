@@ -1,4 +1,4 @@
-const { Mongoose } = require("mongoose");
+const mongoose = require("mongoose");
 const itemSchema = require("./item.model.js");
 
 const invoiceSchema = new mongoose.Schema(
@@ -21,5 +21,5 @@ const invoiceSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-const invoice = Mongoose.model("Innvoice", invoiceSchema);
-module.exports = { invoice };
+const Invoice = mongoose.model("Invoice", invoiceSchema);
+module.exports = { Invoice };
