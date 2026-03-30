@@ -323,8 +323,8 @@ Run or fetch the three-way match result for a PO number.
 
 ```bash
 # 1. Clone and install
-git clone <repo-url>
-cd three-way-match
+git clone https://github.com/sai4u-dev/three-way-match-engine
+cd three-way-match-engine
 npm install
 
 # 2. Set environment variables
@@ -333,6 +333,7 @@ cp .env.example .env
 
 # 3. Start
 node index.js
+npm run start
 ```
 
 **.env.example**
